@@ -15,7 +15,7 @@ resource "aws_instance" "ec2" {
     }
     key_name = aws_key_pair.deploy_ssh_key.id
     vpc_security_group_ids  = [aws_security_group.allow_ssh.id]
-    user_data = file("postgres.sh")
+    /* user_data = file("postgres.sh") */
 }
 
 resource "aws_key_pair" "deploy_ssh_key" {
